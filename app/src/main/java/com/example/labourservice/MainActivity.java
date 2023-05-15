@@ -10,15 +10,19 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.ContactsContract;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.labourservice.databinding.ActivityMainBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button Log_out;
     ViewPager2 viewPager2;
-
+    BottomNavigationView bottomNavigationView;
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
@@ -43,7 +47,30 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         viewPager2 =findViewById(R.id.viewPager);
+        bottomNavigationView=findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.home);
 
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId())
+                {
+                    case R.id.profile:
+                        startActivity(new Intent(getApplicationContext(),ProfileActivity2.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.home:
+                        return true;
+
+
+
+                }
+
+                return false;
+            }
+        });
         List<SlideIten> slideItem=new ArrayList<>();
 
         slideItem.add(new SlideIten(R.drawable.slider1));
