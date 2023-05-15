@@ -13,6 +13,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText userEdt, passEdt;
     private Button loginBtn;
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        Toast.makeText(getApplicationContext(),"Sorry, You Cannot Go Back!!",Toast.LENGTH_SHORT).show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +37,11 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (userEdt.getText().toString().isEmpty() || passEdt.getText().toString().isEmpty()){
                     Toast.makeText(LoginActivity.this, "Please fill the login form",Toast.LENGTH_SHORT).show();
-                }else if (userEdt.getText().toString().equals("admin")&& passEdt.getText().toString().equals("admin")){
+                }else if (userEdt.getText().toString().equals("rohit")&& passEdt.getText().toString().equals("rohit")){
 
                     startActivity(new Intent(LoginActivity.this,MainActivity.class));
                 }else {
-                    Toast.makeText(LoginActivity.this, "Wrong Details Entered",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Please enter correct user name & pswd",Toast.LENGTH_SHORT).show();
 
                 }
             }

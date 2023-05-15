@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
     Button Log_out;
     ViewPager2 viewPager2;
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        Toast.makeText(getApplicationContext(),"Sorry, You Cannot Go Back!!",Toast.LENGTH_SHORT).show();
+    }
 
     // implementing auto slide facility
     private Handler slideHandler =new Handler();
@@ -34,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
         List<SlideIten> slideItem=new ArrayList<>();
 
         slideItem.add(new SlideIten(R.drawable.slider1));
-        slideItem.add(new SlideIten(R.drawable.slider2));
-        slideItem.add(new SlideIten(R.drawable.slider3));
+        slideItem.add(new SlideIten(R.drawable.addbanner));
+        slideItem.add(new SlideIten(R.drawable.add2));
         slideItem.add(new SlideIten(R.drawable.slider4));
 
         viewPager2.setAdapter(new SlideAdapter(slideItem,viewPager2));
@@ -64,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onPageSelected(int position) {
                     super.onPageSelected(position);
                     slideHandler.removeCallbacks(sliderRunnable);
-                    slideHandler.postDelayed(sliderRunnable,2000);
+                    slideHandler.postDelayed(sliderRunnable,4000);
                 }
             });
     }
