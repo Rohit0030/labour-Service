@@ -31,6 +31,12 @@ public class ManageOtp extends AppCompatActivity {
     String optid;
 
     @Override
+    public void onBackPressed() {
+        Toast.makeText(getApplicationContext(),"Enter OTP",Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_otp);
