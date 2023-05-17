@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1052629413333",
+    "project_id": "labour-service-93a20",
+    "storage_bucket": "labour-service-93a20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052629413333:android:63011a60cee221bfd8215c",
+        "android_client_info": {
+          "package_name": "com.example.labourservice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052629413333-0duqertg03v0m6o3deapnjumksiqclbg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.labourservice",
+            "certificate_hash": "8c55d98ef13c1f4e3d30af6342e7bde5457675c3"
+          }
+        },
+        {
+          "client_id": "1052629413333-9blsmam9h7t0lfbhl6951lsce45r468u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_Rb3C7rYlHy7Vfl_49bqm69cJlvmLTzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052629413333-9blsmam9h7t0lfbhl6951lsce45r468u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

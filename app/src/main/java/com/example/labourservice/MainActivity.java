@@ -2,9 +2,6 @@ package com.example.labourservice;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
@@ -13,16 +10,14 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.ContactsContract;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Button Log_out;
     ViewPager2 viewPager2;
     BottomNavigationView bottomNavigationView;
+    Button btn;
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
@@ -43,9 +39,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
+        btn=(Button)findViewById(R.id.logoutmain);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                finish();
+            }
+        });
         viewPager2 =findViewById(R.id.viewPager);
         bottomNavigationView=findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.home);
@@ -76,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         slideItem.add(new SlideIten(R.drawable.slider1));
         slideItem.add(new SlideIten(R.drawable.addbanner));
         slideItem.add(new SlideIten(R.drawable.add2));
-        slideItem.add(new SlideIten(R.drawable.slider4));
+        slideItem.add(new SlideIten(R.drawable.slider2));
 
         viewPager2.setAdapter(new SlideAdapter(slideItem,viewPager2));
 

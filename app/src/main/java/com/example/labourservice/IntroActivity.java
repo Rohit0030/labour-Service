@@ -23,7 +23,7 @@ public class IntroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent=new Intent(IntroActivity.this,LoginActivity.class);
+                Intent intent=new Intent(IntroActivity.this,OtpActivity.class);
                 startActivity(intent);
             }
 
