@@ -49,7 +49,7 @@ public class OtpActivity extends AppCompatActivity {
 
                 if (t1.getText().toString().isEmpty()){
 
-                    Toast.makeText(OtpActivity.this, "Please Enter the mobile number",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OtpActivity.this, "Please Enter mobile number",Toast.LENGTH_SHORT).show();
 
                 }else {
                     Intent intent=new Intent(OtpActivity.this,ManageOtp.class);

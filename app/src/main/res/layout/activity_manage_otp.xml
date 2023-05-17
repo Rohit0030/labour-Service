@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:text="OTP Verification"
         android:textColor="@color/white"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         android:textSize="40sp"
 
         app:layout_constraintEnd_toEndOf="parent"

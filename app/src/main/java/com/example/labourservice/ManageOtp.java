@@ -53,7 +53,7 @@ public class ManageOtp extends AppCompatActivity {
           @Override
           public void onClick(View v) {
               if (t2.getText().toString().isEmpty())
-                  Toast.makeText(getApplicationContext(),"Blank Field can not be processed",Toast.LENGTH_LONG).show();
+                  Toast.makeText(getApplicationContext(),"Enter OTP to Sign In",Toast.LENGTH_LONG).show();
               else if (t2.getText().toString().length()!=6)
                   Toast.makeText(getApplicationContext(),"Invelid OTP",Toast.LENGTH_LONG).show();
               else {

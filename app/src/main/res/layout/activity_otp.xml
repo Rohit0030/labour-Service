@@ -43,6 +43,7 @@
         android:layout_width="171dp"
         android:layout_height="50dp"
         android:text="Get OTP"
+        android:textSize="20sp"
         android:background="@drawable/button_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,16 +53,16 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="416dp"
-        android:layout_height="326dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginRight="20dp"
+        android:layout_width="418dp"
+        android:layout_height="320dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         app:layout_constraintBottom_toTopOf="@+id/t1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.165"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/otpimage"
         tools:ignore="MissingConstraints" />
 
@@ -71,7 +72,7 @@
         android:layout_height="wrap_content"
         android:text="OTP Verification"
         android:textColor="@color/white"
-        android:textStyle="bold|italic"
+        android:textStyle="bold"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
